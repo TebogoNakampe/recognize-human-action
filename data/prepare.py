@@ -30,7 +30,7 @@ def extract(data):
 			#cv2.imwrite(base + "/" + data["fileName"] + "_%d.jpg" %count, image)
 			img = np.array(image)
 			
-			return_data.append({"image":None, "label":label})
+			return_data.append({"image":img, "label":label})
 		elif(count > int(data["end"])-10):
 			break
 		count = count + 1
@@ -46,7 +46,7 @@ def prepare():
 	path = "_data/"
 	data_seq = "_data/frame_sequence.txt"
 
-	form = {"fileName" : None, "start":None, "end":None}
+	form = {"fileName":None, "start":None, "end":None}
 
 	lines = [line.rstrip('\n').rstrip('\r').split("\t") for line in open(data_seq)]
 	label = [l[0].rstrip() for l in lines]
@@ -65,7 +65,7 @@ def prepare():
 	for data in result:
 		print(data["fileName"])
 		d = d + extract(data)
-		if(count == 12):
+		if(count == 48):
 			break
 		count = count + 1
 	
@@ -80,7 +80,7 @@ def prepare():
 def make_train_data(data):
 
 	length_data = len(data)
-	
+
 	x = np.array([d["image"] for d in data])
 	_y = np.array([d["label"] for d in data])
 
@@ -89,11 +89,14 @@ def make_train_data(data):
 
 
 	l = int(length_data/10)
+	
 	train_x = x[:l]
 	train_y = y[:l]
+
+	print(train_y[0])
 
 	test_x = x[l:]
 	test_y = y[l:]
 
 
-	return train_x, train_y, test_x, test_y
+	return [train_x, train_y, test_x, test_y]

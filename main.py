@@ -2,7 +2,9 @@ from cnn.action_recog import run
 from data.prepare import prepare, make_train_data
 
 d = prepare()
-make_train_data(d)
+data = make_train_data(d)
 
 
-run()
+epoch = 15
+batch_size = 100
+run(data, batch_size, epoch)

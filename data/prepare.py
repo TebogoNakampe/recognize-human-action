@@ -1,7 +1,7 @@
 import os
 import cv2
+import csv
 
-video_files = os.listdir("_data/running/")
 
 
 def extract(data):
@@ -42,7 +42,7 @@ def write(data):
 			writer.writeheader()
 			for d in data:
 				writer.writerow(d)
-	except IOError as (errno, strerror):
+	except IOError:
 		print("I/O error")
 
 

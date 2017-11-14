@@ -39,19 +39,6 @@ def extract(data):
 	#extract farme data["start"] ~ data["end"] in videon_name
 	#form -> frame\tlabel
 
-def write(data):
-	try:
-		#csv_columns = ["image", "label"]
-		box = open("_data/boxing_data.csv", "wb") 
-		
-		for d in data:
-			if(d["label"] == "boxing"):
-				box.write(b'boxing')
-				for a in d['image']:
-					np.savetxt(box, a, fmt='%d')
-
-	except IOError:
-		print("I/O error")
 
 
 #_data/running/person01_running_d1_uncomp.avi
@@ -78,5 +65,35 @@ def prepare():
 	for data in result:
 		print(data["fileName"])
 		d = d + extract(data)
-		
+		if(count == 12):
+			break
+		count = count + 1
+	
+
+	#[
+	#{"image" : [[[],[],[]]], "label" : label}
+	#{"image" : [[[],[],[]]], "label" : label}
+	#{"image" : [[[],[],[]]], "label" : label}...
+	#]
 	return d
+
+def make_train_data(data):
+
+	length_data = len(data)
+	
+	x = np.array([d["image"] for d in data])
+	_y = np.array([d["label"] for d in data])
+
+	y = np.zeros((len(_y), len(set(_y))))
+	y[np.arange(len(_y)), [list(set(_y)).index(i) for i in _y]] = 1
+
+
+	l = int(length_data/10)
+	train_x = x[:l]
+	train_y = y[:l]
+
+	test_x = x[l:]
+	test_y = y[l:]
+
+
+	return train_x, train_y, test_x, test_y

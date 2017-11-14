@@ -65,7 +65,7 @@ def prepare():
 	for data in result:
 		print(data["fileName"])
 		d = d + extract(data)
-		if(count == 48):
+		if(count == 30):
 			break
 		count = count + 1
 	
@@ -92,8 +92,6 @@ def make_train_data(data):
 	
 	train_x = x[:l]
 	train_y = y[:l]
-
-	print(train_y[0])
 
 	test_x = x[l:]
 	test_y = y[l:]

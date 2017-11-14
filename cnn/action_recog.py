@@ -13,6 +13,9 @@ def run(data, batch_size, epoch):
 
 	train_len = len(train_x)
 	num_out = len(train_y[0])
+
+	train_y = train_y.reshape(-1, num_out)
+	test_y = test_y.reshape(-1, num_out)
 	#X -> fix
 	#Y -> can be changed
 	X = tf.placeholder(tf.float32, [None, 120, 160, 3])
@@ -47,7 +50,8 @@ def run(data, batch_size, epoch):
 
 
 	total_batch = int(train_len/batch_size)
-
+	if(total_batch == 0):
+		total_batch = 1
 	for e in range(epoch):
 		total_cost = 0
 
@@ -60,7 +64,13 @@ def run(data, batch_size, epoch):
 				batch_x = train_x[j:j+batch_size]
 				batch_y = train_y[j:j+batch_size]
 				j = j+batch_size
-			
+				
+				
+			batch_y = batch_y.reshape(-1, num_out)
+				#print(type(batch_x))
+				#print(batch_x.shape)
+				#print(type(batch_y))
+				#print(batch_y.shape)
 			_, cost_val = sess.run([optimizer, cost], feed_dict={X:batch_x, Y:batch_y})
 
 			total_cost = total_cost + cost_val

@@ -5,6 +5,6 @@ d = prepare()
 data = make_train_data(d)
 
 
-epoch = 15
+epoch = 10
 batch_size = 100
 run(data, batch_size, epoch)

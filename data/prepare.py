@@ -1,15 +1,16 @@
 import os
 import cv2
 import csv
+import numpy as np
 
 
 
 def extract(data):
 	path = "_data/"
-	#base = path + data["fileName"].split('_')[1] + "/frames/"
+	base = path + data["fileName"].split('_')[1] + "/frames/"
 
-	#if not(os.path.exists(base)):
-	#	os.makedirs(base)
+	if not(os.path.exists(base)):
+		os.makedirs(base)
 
 	label = data["fileName"].split("_")[1]
 
@@ -25,8 +26,11 @@ def extract(data):
 	while success:
 		success, image = vidcap.read()
 		if(count > int(data["start"]) and count < int(data["end"])-10):
+			
 			#cv2.imwrite(base + "/" + data["fileName"] + "_%d.jpg" %count, image)
-			return_data.append({"image":image, "label":label})
+			img = np.array(image)
+			
+			return_data.append({"image":None, "label":label})
 		elif(count > int(data["end"])-10):
 			break
 		count = count + 1
@@ -37,11 +41,15 @@ def extract(data):
 
 def write(data):
 	try:
-		with open("_data/data.csv", "w") as csvfile:
-			writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
-			writer.writeheader()
-			for d in data:
-				writer.writerow(d)
+		#csv_columns = ["image", "label"]
+		box = open("_data/boxing_data.csv", "wb") 
+		
+		for d in data:
+			if(d["label"] == "boxing"):
+				box.write(b'boxing')
+				for a in d['image']:
+					np.savetxt(box, a, fmt='%d')
+
 	except IOError:
 		print("I/O error")
 
@@ -66,8 +74,9 @@ def prepare():
 			result.append(form)
 
 	d = []
+	count = 1
 	for data in result:
 		print(data["fileName"])
 		d = d + extract(data)
-
-	write(d)
+		
+	return d

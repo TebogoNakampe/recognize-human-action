@@ -1,24 +1,3 @@
-
-This database contains sequences of six classes of actions performed by
-25 subjects in four different conditions d1-d4 (see below).
-The database is publicly available from http://www.nada.kth.se/cvap/actions
-Contact: Ivan Laptev (laptev@nada.kth.se)
-         Barbara Caputo (caputo@nada.kth.se)
-
-
-d1 - Static homogenous background
-d2 - -"-                          + Scale variations
-d3 - -"-                          + Different clothes
-d4 - -"-                          + Lighting variations
-
-In our experiments (Schuldt, Laptev and Caputo, ICPR 2004) we used the
-following subdivision of sequences with respect to the subject:
-
-Training:   person11, 12, 13, 14, 15, 16, 17, 18
-Validation: person19, 20, 21, 23, 24, 25, 01, 04
-Test:       person22, 02, 03, 05, 06, 07, 08, 09, 10 
-
-
 person01_boxing_d1		frames	1-95, 96-185, 186-245, 246-360
 person01_boxing_d2		frames	1-106, 107-195, 196-265, 305-390
 person01_boxing_d3		frames	1-95, 96-230, 231-360, 361-465
@@ -43,7 +22,6 @@ person01_walking_d1		frames	1-75, 152-225, 325-400, 480-555
 person01_walking_d2		frames	1-120, 170-288, 370-495, 550-675
 person01_walking_d3		frames	1-90, 172-250, 352-430, 875-950
 person01_walking_d4		frames	1-115, 155-260, 280-385, 440-565
-
 person02_boxing_d1		frames	1-105, 106-228, 229-314, 315-428
 person02_boxing_d2		frames	1-126, 127-236, 237-312, 313-460
 person02_boxing_d3		frames	1-120, 121-218, 219-350, 351-490
@@ -68,7 +46,6 @@ person02_walking_d1		frames	1-72, 150-228, 230-295, 372-450
 person02_walking_d2		frames	1-208, 292-495, 660-856, 870-1060
 person02_walking_d3		frames	1-86, 172-258, 280-372, 458-542
 person02_walking_d4		frames	1-107, 120-210, 236-336, 362-460
-
 person03_boxing_d1		frames	1-108, 109-238, 239-340, 341-442
 person03_boxing_d2		frames	1-128, 129-225, 226-352, 353-502
 person03_boxing_d3		frames	1-102, 103-150, 180-290, 291-414
@@ -93,7 +70,6 @@ person03_walking_d1		frames	1-104, 228-330, 425-526, 550-640
 person03_walking_d2		frames	1-226, 238-468, 478-685, 765-960
 person03_walking_d3		frames	1-128, 754-834, 890-975, 1032-1120
 person03_walking_d4		frames	1-92, 118-216, 232-338, 338-432
-
 person04_boxing_d1		frames	1-106, 107-184, 185-282, 283-328
 person04_boxing_d2		frames	1-116, 117-205, 206-344, 345-475
 person04_boxing_d3		frames	1-112, 113-216, 217-280, 281-390
@@ -118,7 +94,6 @@ person04_walking_d1		frames	1-85, 108-196, 268-356, 382-470
 person04_walking_d2		frames	1-155, 212-380, 485-630, 680-840
 person04_walking_d3		frames	1-74, 128-215, 272-350, 394-480
 person04_walking_d4		frames	1-100, 112-205, 218-310, 328-418
-
 person05_boxing_d1		frames	1-136, 137-237, 238-372, 373-438
 person05_boxing_d2		frames	1-78, 79-215, 216-326, 327-444
 person05_boxing_d3		frames	1-96, 97-225, 226-352, 353-430
@@ -143,7 +118,6 @@ person05_walking_d1		frames	1-75, 140-215, 312-382, 452-535
 person05_walking_d2		frames	1-115, 208-318, 365-480, 560-675
 person05_walking_d3		frames	1-85, 172-258, 318-395, 475-552
 person05_walking_d4		frames	1-102, 142-240, 252-348, 408-515
-
 person06_boxing_d1		frames	1-102, 103-220, 221-302, 303-412
 person06_boxing_d2		frames	1-86, 87-160, 161-296, 297-408
 person06_boxing_d3		frames	1-112, 113-206, 207-304, 305-392
@@ -168,7 +142,6 @@ person06_walking_d1		frames	1-72, 126-192, 240-308, 350-420
 person06_walking_d2		frames	1-180, 243-390, 528-668, 732-868
 person06_walking_d3		frames	1-68, 102-166, 238-306, 340-408
 person06_walking_d4		frames	1-100, 132-230, 240-332, 382-478
-
 person07_boxing_d1		frames	1-108, 109-208, 209-290, 291-385
 person07_boxing_d2		frames	1-96, 109-218, 265-325, 426-478
 person07_boxing_d3		frames	1-104, 105-198, 199-283, 284-384
@@ -193,7 +166,6 @@ person07_walking_d1		frames	1-64, 148-215, 288-350, 412-475
 person07_walking_d2		frames	1-98, 186-284, 342-448, 528-636
 person07_walking_d3		frames	1-88, 112-194, 298-386, 414-495
 person07_walking_d4		frames	1-110, 164-250, 296-386, 442-550
-
 person08_boxing_d1		frames	1-110, 111-248, 249-334, 335-420
 person08_boxing_d2		frames	1-112, 113-227, 228-316, 317-464
 person08_boxing_d3		frames	1-68, 108-216, 217-354, 355-434
@@ -218,7 +190,6 @@ person08_walking_d1		frames	1-78, 185-258, 326-398, 478-552
 person08_walking_d2		frames	1-128, 200-330, 408-542, 622-750
 person08_walking_d3		frames	1-85, 180-255, 340-428, 502-585
 person08_walking_d4		frames	1-132, 190-308, 338-448, 500-625
-
 person09_boxing_d1		frames	1-120, 121-218, 219-312, 313-448
 person09_boxing_d2		frames	1-128, 129-205, 206-330, 331-432
 person09_boxing_d3		frames	1-118, 119-190, 191-288, 289-418
@@ -243,7 +214,6 @@ person09_walking_d1		frames	1-65, 208-275, 390-460, 618-685
 person09_walking_d2		frames	1-106, 250-368, 425-544, 686-805
 person09_walking_d3		frames	1-64, 195-256, 375-442, 576-640
 person09_walking_d4		frames	1-90, 118-208, 218-302, 334-422
-
 person10_boxing_d1		frames	1-92, 93-188, 189-286, 287-422
 person10_boxing_d2		frames	1-140, 195-287, 288-398, 429-530
 person10_boxing_d3		frames	1-120, 121-244, 245-395, 396-550
@@ -268,7 +238,6 @@ person10_walking_d1		frames	1-85, 215-302, 375-455, 572-655
 person10_walking_d2		frames	1-190, 335-524, 585-762, 900-1092
 person10_walking_d3		frames	1-80, 215-295, 330-405, 535-615
 person10_walking_d4		frames	1-95, 162-270, 271-375, 435-544
-
 person11_boxing_d1		frames	1-74, 75-141, 142-273, 274-351
 person11_boxing_d2		frames	1-92, 165-216, 228-306, 390-545
 person11_boxing_d3		frames	1-95, 96-208, 209-334, 335-444
@@ -293,7 +262,6 @@ person11_walking_d1		frames	1-95, 145-245, 370-460, 525-640
 person11_walking_d2		frames	1-185, 260-435, 450-605, 660-810
 person11_walking_d3		frames	1-90, 180-310, 385-475, 590-680
 person11_walking_d4    		frames	1-95, 140-235, 300-400, 432-520
-
 person12_boxing_d1		frames	1-137, 138-242, 243-380, 381-590
 person12_boxing_d2		frames	1-89, 90-152, 180-325, 326-687
 person12_boxing_d3		frames	1-155, 156-300, 310-560, 561-701
@@ -318,14 +286,12 @@ person12_walking_d1		frames	1-80, 150-250, 320-405, 485-570
 person12_walking_d2		frames	1-160, 225-400, 472-620, 690-850
 person12_walking_d3		frames	1-75, 210-290, 300-385, 430-510
 person12_walking_d4		frames	1-125, 170-300, 320-440, 490-640
-
 person13_boxing_d1		frames	1-105, 106-217, 218-330, 331-538
 person13_boxing_d2		frames	1-144, 171-295, 296-415, 416-631
 person13_boxing_d3		frames	1-80, 81-212, 213-296, 297-419
 person13_boxing_d4		frames	1-109, 110-239, 240-352, 353-420
 person13_handclapping_d1	frames	1-124, 125-223, 224-322, 323-396
 person13_handclapping_d2	frames	1-100, 101-275, 305-400, 401-523
-person13_handclapping_d3	*missing*
 person13_handclapping_d4	frames	1-132, 133-234, 235-335, 336-443
 person13_handwaving_d1		frames	1-80, 100-255, 256-407, 408-520
 person13_handwaving_d2		frames	1-116, 117-225, 226-333, 334-492
@@ -343,7 +309,6 @@ person13_walking_d1		frames	1-90, 185-290, 335-430, 585-690
 person13_walking_d2		frames	1-150, 345-485, 520-650, 800-940
 person13_walking_d3		frames	1-100, 205-310, 370-470, 580-670
 person13_walking_d4		frames	1-120, 185-295, 335-440, 495-600
-
 person14_boxing_d1		frames	1-123, 124-258, 259-444, 445-558
 person14_boxing_d2		frames	1-102, 155-264, 265-415, 416-610
 person14_boxing_d3		frames	1-162, 163-322, 323-423, 424-562
@@ -368,7 +333,6 @@ person14_walking_d1		frames	1-115, 205-350, 395-500, 590-720
 person14_walking_d2		frames	1-150, 240-385, 462-610, 720-870
 person14_walking_d3		frames	1-95, 255-380, 420-515, 620-713
 person14_walking_d4    		frames	1-115, 155-280, 290-400, 440-555
-
 person15_boxing_d1		frames	1-150, 151-216, 217-290, 291-408
 person15_boxing_d2		frames	1-128, 129-252, 253-335, 336-485
 person15_boxing_d3		frames	1-90, 91-191, 192-264, 265-418
@@ -393,7 +357,6 @@ person15_walking_d1		frames	1-105, 215-338, 422-540, 630-741
 person15_walking_d2		frames	1-175, 235-375, 435-575, 650-790
 person15_walking_d3		frames	1-80, 175-258, 365-455, 565-655
 person15_walking_d4    		frames	1-145, 170-322, 340-470, 535-678
-
 person16_boxing_d1		frames	1-105, 106-225, 226-362, 363-494
 person16_boxing_d2		frames	1-42, 74-200, 201-280, 342-466
 person16_boxing_d3		frames	1-120, 121-250, 251-370, 371-530
@@ -418,7 +381,6 @@ person16_walking_d1		frames	1-95, 158-252, 335-445, 500-605
 person16_walking_d2		frames	1-160, 225-360, 420-560, 610-750
 person16_walking_d3		frames	1-95, 230-330, 370-485, 585-695
 person16_walking_d4		frames	1-115, 155-280, 306-415, 455-565
-
 person17_boxing_d1		frames	1-110, 110-192, 193-306, 307-378
 person17_boxing_d2		frames	1-112, 113-198, 199-335, 336-490
 person17_boxing_d3		frames	1-122, 123-226, 227-332, 333-472
@@ -443,7 +405,6 @@ person17_walking_d1		frames	1-115, 160-270, 350-460, 570-666
 person17_walking_d2		frames	1-160, 340-496, 588-750, 898-1065
 person17_walking_d3		frames	1-105, 202-305, 455-545, 640-725
 person17_walking_d4		frames	1-112, 140-255, 300-420, 445-560
-
 person18_boxing_d1		frames	1-132, 133-262, 263-426, 427-615
 person18_boxing_d2		frames	1-85, 115-211, 271-376, 412-540
 person18_boxing_d3		frames	1-128, 129-290, 291-398, 399-478
@@ -468,7 +429,6 @@ person18_walking_d1    		frames	1-95, 120-210, 495-585, 645-745
 person18_walking_d2		frames	1-120, 168-275, 380-495, 535-645
 person18_walking_d3		frames	1-95, 168-255, 360-450, 550-640
 person18_walking_d4		frames	1-80, 125-210, 224-320, 395-492
-
 person19_boxing_d1		frames	1-108, 109-182, 183-269, 270-350
 person19_boxing_d2		frames	1-126, 127-255, 256-354, 355-468
 person19_boxing_d3		frames	1-92, 93-185, 186-310, 311-442
@@ -493,7 +453,6 @@ person19_walking_d1		frames	1-85, 125-215, 285-370, 435-525
 person19_walking_d2		frames	1-125, 200-358, 405-550, 655-805
 person19_walking_d3		frames	1-80, 136-220, 298-380, 442-525
 person19_walking_d4		frames	1-128, 188-315, 324-428, 452-570
-
 person20_boxing_d1		frames	1-112, 113-206, 207-300, 301-390
 person20_boxing_d2		frames	1-118, 119-218, 219-366, 367-478
 person20_boxing_d3		frames	1-130, 131-290, 291-424, 425-496
@@ -518,7 +477,6 @@ person20_walking_d1		frames	1-90, 150-258, 350-445, 540-635
 person20_walking_d2		frames	1-162, 295-455, 512-655, 735-888
 person20_walking_d3		frames	1-80, 105-180, 295-370, 420-495
 person20_walking_d4		frames	1-105, 150-245, 258-355, 365-480
-
 person21_boxing_d1		frames	1-75, 76-203, 204-286, 287-365
 person21_boxing_d2    		frames	1-112, 113-162, 153-254, 255-408
 person21_boxing_d3		frames	1-142, 143-242, 258-346, 347-485
@@ -543,7 +501,6 @@ person21_walking_d1		frames	1-82, 188-270, 436-514, 648-740
 person21_walking_d2		frames	1-132, 195-350, 550-725, 768-930
 person21_walking_d3		frames	1-70, 195-260, 506-575, 700-775
 person21_walking_d4		frames	1-130, 172-288, 298-400, 490-612
-
 person22_boxing_d1		frames	1-92, 104-208, 222-302
 person22_boxing_d2		frames	1-74, 148-248, 262-320, 337-417
 person22_boxing_d3		frames	1-99, 125-226, 227-340, 363-428
@@ -568,7 +525,6 @@ person22_walking_d1		frames	1-102, 202-310, 372-468, 586-700
 person22_walking_d2		frames	1-152, 225-375, 465-618, 760-920
 person22_walking_d3		frames	1-100, 258-350, 495-580, 720-815
 person22_walking_d4		frames	1-110, 130-248, 252-372, 412-540
-
 person23_boxing_d1		frames	1-95, 96-172, 258-372, 373-482
 person23_boxing_d2		frames	1-128, 129-250, 251-392, 393-500
 person23_boxing_d3		frames	1-82, 83-218, 219-340, 341-448
@@ -593,7 +549,6 @@ person23_walking_d1		frames	1-80, 156-250, 346-440, 498-590
 person23_walking_d2		frames	1-174, 230-426, 442-634, 672-850
 person23_walking_d3		frames	1-84, 128-212, 342-424, 480-555
 person23_walking_d4		frames	1-94, 134-234, 242-330, 380-478
-
 person24_boxing_d1		frames	1-112, 113-190, 191-280, 281-366
 person24_boxing_d2		frames	1-122, 123-246, 275-348, 349-452
 person24_boxing_d3		frames	1-94, 95-188, 189-294, 295-390
@@ -618,7 +573,6 @@ person24_walking_d1		frames	1-80, 172-248, 420-500, 592-664
 person24_walking_d2		frames	1-184, 272-448, 544-712, 797-960
 person24_walking_d3		frames	1-80, 165-245, 324-402, 500-580
 person24_walking_d4		frames	1-88, 104-196, 206-290, 305-395
-
 person25_boxing_d1		frames	1-108, 109-195, 196-305, 306-396
 person25_boxing_d2		frames	1-108, 109-218, 219-322, 323-456
 person25_boxing_d3		frames	1-130, 131-244, 245-394, 395-474

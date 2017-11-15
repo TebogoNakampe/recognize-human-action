@@ -1,3 +1,5 @@
 *.pyc
 *.avi
 *.jpg
+*.xml
+*.iml

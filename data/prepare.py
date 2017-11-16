@@ -2,9 +2,11 @@ import os
 import cv2
 import csv
 import numpy as np
+import random
 
 
-def extract(data):
+##should be modify -> frame should contain all body of people
+def extract(data, size):
     path = "_data/"
     base = path + data["fileName"].split('_')[1] + "/frames/"
 
@@ -27,7 +29,8 @@ def extract(data):
         if(count > int(data["start"]) and count < int(data["end"])-10 and count%10==0):
 
 #           cv2.imwrite(base + "/" + data["fileName"] + "_%d.jpg" %count, image)
-            img = np.array(image)
+            resize = cv2.resize(image, (size[0], size[1]))
+            img = np.array(resize)
 
             return_data.append({"image":img, "label":label})
         elif(count > int(data["end"])-10):
@@ -40,15 +43,19 @@ def extract(data):
 
 
 # _data/running/person01_running_d1_uncomp.avi
-def prepare():
+def prepare(size):
     path = "_data/"
     data_seq = "_data/frame_sequence.txt"
 
     form = {"fileName":None, "start":None, "end":None}
 
     lines = [line.rstrip('\n').rstrip('\r').split("\t") for line in open(data_seq)]
+    
+    lines = lines[:200]
+
     label = [l[0].rstrip() for l in lines]
     _frame = [l[-1].split(", ") for l in lines]
+
     result = []
 
     for f, l in zip(_frame, label):
@@ -62,11 +69,8 @@ def prepare():
     count = 1
     for data in result:
         print(data["fileName"])
-        if not("box" in data["fileName"]):
-            d = d + extract(data)
-            if(count == 50):
-                break
-            count = count + 1
+        d = d + extract(data, size)
+        count = count + 1
 
 
 # [
@@ -79,7 +83,9 @@ def prepare():
 
 def make_train_data(data):
     length_data = len(data)
-
+    
+    random.shuffle(data)
+    
     x = np.array([d["image"] for d in data])
     _y = np.array([d["label"] for d in data])
 

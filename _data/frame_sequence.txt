@@ -1,9 +1,4 @@
 person01_boxing_d1		frames	1-95, 96-185, 186-245, 246-360
-person01_handclapping_d1	frames	1-102, 103-182, 183-260, 261-378
-person01_handwaving_d1		frames	1-112, 113-220, 221-360, 361-468
-person01_jogging_d1		frames	1-50, 120-170, 250-300, 362-415
-person01_walking_d2		frames	1-120, 170-288, 370-495, 550-675
-person01_running_d2		frames	1-55, 90-145, 212-260, 310-365
 person01_boxing_d2		frames	1-106, 107-195, 196-265, 305-390
 person01_boxing_d3		frames	1-95, 96-230, 231-360, 361-465
 person01_boxing_d4		frames	1-106, 107-170, 171-245, 246-370
